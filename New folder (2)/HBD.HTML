@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, red, darkred);
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh); }
+            100% { transform: translateY(-10vh); }
+        }
+    </style>
+</head>
+<body>
+    <h1>สุขสันต์วันเกิด! 🎉</h1>
+    <button onclick="showBalloons()">กดนี่ดูสิจ้ะเบบี๋</button>
+    <script>
+        function showBalloons() {
+            for (let i = 0; i < 10; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.left = Math.random() * 100 + 'vw';
+                document.body.appendChild(balloon);
+            }
+            alert("้happy birthday kub มีความสุขมากนะน้อง สมหวังกับความรัก  🎂");
+        }
+    </script>
+</body>
+</html>
